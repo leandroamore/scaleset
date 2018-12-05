@@ -19,6 +19,6 @@ sudo sed -i 's/ResourceDisk.Format=n/ResourceDisk.Format=y/g' /etc/waagent.conf
 sudo sed -i 's/ResourceDisk.SwapSizeMB=0/ResourceDisk.SwapSizeMB=8192/g' /etc/waagent.conf
 sudo systemctl restart waagent.service
 
-sudo cd /mnt/shared/modernizacion/test
-sudo docker-compose  pull --include-deps
+#sudo cd /mnt/shared/modernizacion/test
+#sudo docker-compose  pull --include-deps
 sudo docker-compose -f /mnt/shared/modernizacion/test/docker-compose.yml up -d
