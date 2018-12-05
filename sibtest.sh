@@ -21,8 +21,8 @@ sudo sed -i 's/ResourceDisk.EnableSwap=n/ResourceDisk.EnableSwap=y/g' /etc/waage
 sudo sed -i 's/ResourceDisk.Format=n/ResourceDisk.Format=y/g' /etc/waagent.conf
 sudo sed -i 's/ResourceDisk.SwapSizeMB=0/ResourceDisk.SwapSizeMB=4096/g' /etc/waagent.conf
 echo "reiniciando el servicio de Waagent"
-sudo systemctl restart waagent.service
-echo "esperando 10 segundos"
+#sudo systemctl restart waagent.service
+#echo "esperando 10 segundos"
 sleep 10s
 echo "levantando dockers"
 sudo docker-compose -f /mnt/shared/modernizacion/test/docker-compose.yml up -d
