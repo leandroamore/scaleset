@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-sudo yum update
+#sudo yum update
 #creo carpetas y symbolic links
 echo "Creando Symbolic Links"
 sudo mkdir /mnt/shared/modernizacion/test/log/$HOSTNAME
