@@ -17,7 +17,7 @@ sudo sed -i 's/Default 9/default '$HOSTNAME'/gi' /mnt/shared/modernizacion/test/
 sudo sed -i 's/ResourceDisk.EnableSwap=n/ResourceDisk.EnableSwap=y/g' /etc/waagent.conf
 sudo sed -i 's/ResourceDisk.Format=n/ResourceDisk.Format=y/g' /etc/waagent.conf
 sudo sed -i 's/ResourceDisk.SwapSizeMB=0/ResourceDisk.SwapSizeMB=8192/g' /etc/waagent.conf
-sudo service walinuxagent restart
+sudo systemctl waagent restart
 
 sudo cd /mnt/shared/modernizacion/test
 sudo docker-compose  pull --include-deps
